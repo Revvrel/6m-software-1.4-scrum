@@ -7,23 +7,36 @@
 */
 
 // Task: Add code here
+class BaseSignal {
+  constructor() {
+    if (this.Signal === BaseSignal) {
+        throw new Error("This class cannot be initiated");
+    }
+  }
+  send(){
+    console.log(`Sending ${this.constructor.name} signal`)
+  }
+}
 
 class TvSignal extends BaseSignal {
-    constructor(){
-        // Add code here
-    }
+  constructor() {
+    // Add code here
+    super();
+  }
 }
 
 class AirconSignal extends BaseSignal {
-    constructor(){
-        // Add code here
-    }
+  constructor() {
+    // Add code here
+    super();
+  }
 }
 
 class DoorSignal extends BaseSignal {
-    constructor(){
-        // Add code here
-    }
+  constructor() {
+    // Add code here
+    super();
+  }
 }
 
 const tv = new TvSignal();
